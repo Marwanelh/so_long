@@ -19,13 +19,13 @@ void	init_music(t_game *game)
 	pid = fork();
 	if (pid == 0)
 	{
-		execlp("paplay", "paplay", "--volume=65536", "sound/music.ogg", NULL);
+		execlp("paplay", "paplay", "--volume=65536", "sound/music.mp3", NULL);
 		execlp("ffplay", "ffplay", "-nodisp", "-autoexit", "-loglevel", "quiet",
-			"sound/music.ogg", NULL);
-		execlp("mpv", "mpv", "--no-video", "--quiet", "sound/music.ogg", NULL);
+			"sound/music.mp3", NULL);
+		execlp("mpv", "mpv", "--no-video", "--quiet", "sound/music.mp3", NULL);
 		execlp("cvlc", "cvlc", "--play-and-exit", "--no-video",
-			"sound/music.ogg", NULL);
-		execlp("aplay", "aplay", "sound/music.ogg", NULL);
+			"sound/music.mp3", NULL);
+		execlp("aplay", "aplay", "sound/music.mp3", NULL);
 		exit(1);
 	}
 	else
