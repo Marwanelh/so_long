@@ -5,8 +5,8 @@
 so_long
 so_long_bonus
 
-# Libraries
-*.a
+# Libraries (except libmlx42.a which is needed)
+libft/libft.a
 
 # MacOS
 .DS_Store
