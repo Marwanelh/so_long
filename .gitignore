@@ -1,0 +1,21 @@
+# Object files
+*.o
+
+# Compiled binaries
+so_long
+so_long_bonus
+
+# Libraries
+*.a
+
+# MacOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*~
+*.swp
+*.swo
