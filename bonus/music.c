@@ -32,12 +32,12 @@ void	init_music(t_game *game)
 	if (pid == 0)
 	{
 		redirect_errors();
-		execlp("paplay", "paplay", "--volume=65536", "sound/music.mp3", NULL);
+		execlp("cvlc", "cvlc", "--play-and-exit", "--no-video",
+			"sound/music.mp3", NULL);
 		execlp("ffplay", "ffplay", "-nodisp", "-autoexit", "-loglevel", "quiet",
 			"sound/music.mp3", NULL);
 		execlp("mpv", "mpv", "--no-video", "--quiet", "sound/music.mp3", NULL);
-		execlp("cvlc", "cvlc", "--play-and-exit", "--no-video",
-			"sound/music.mp3", NULL);
+		execlp("paplay", "paplay", "--volume=65536", "sound/music.mp3", NULL);
 		execlp("aplay", "aplay", "-q", "sound/music.mp3", NULL);
 		exit(0);
 	}
