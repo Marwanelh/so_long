@@ -1,0 +1,21 @@
+# Object files
+*.o
+
+# Compiled binaries
+so_long
+so_long_bonus
+
+# Libraries (except libmlx42.a which is needed)
+libft/libft.a
+
+# MacOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*~
+*.swp
+*.swo
